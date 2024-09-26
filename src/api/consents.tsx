@@ -17,7 +17,7 @@ export async function createConsent(consent: ConsentType) {
   try {
     const res = await fetch('/todos', {
       method: 'POST',
-      body: consent,
+      body: JSON.stringify(consent),
     })
 
     return res.json()
