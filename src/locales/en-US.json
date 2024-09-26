@@ -32,5 +32,9 @@
   "pagination": {
     "previous": "Previous",
     "next": "Next"
+  },
+  "error": {
+    "title": "Ops! Something happened !",
+    "description": "We found an error here, and we will investigate it."
   }
 }
