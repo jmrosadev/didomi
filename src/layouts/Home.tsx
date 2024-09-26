@@ -12,7 +12,7 @@ export function HomeLayout() {
       </div>
       <main className="ml-64 flex-1 overflow-auto p-8">
         <h1 className="text-5xl font-bold pb-4 mb-4">Didomi</h1>
-        <div className="space-y-6">
+        <div>
           <Outlet />
         </div>
       </main>
