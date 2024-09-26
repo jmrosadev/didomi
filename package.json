@@ -42,6 +42,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
+    "test:e2e": "playwright test --ui",
+    "test:e2e:run": "playwright test",
+    "test:e2e:install": "npx playwright install --with-deps chromium",
     "cleanup": "rm -rf node_modules yarn.lock && yarn cache clean"
   },
   "dependencies": {
@@ -60,6 +63,7 @@
     "@antfu/eslint-config": "^3.6.2",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@playwright/test": "^1.47.2",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
