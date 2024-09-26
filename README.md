@@ -42,7 +42,7 @@ Technologies:
 
 1. Clone the repository:
 ```bash
-> git clone https://github.com/jmanuelrosa/didomi-challenge
+> git clone https://github.com/jmrosadev/didomi-challenge
 ```
 
 2. Navigate to the project directory:

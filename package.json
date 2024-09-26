@@ -16,13 +16,13 @@
     }
   ],
   "license": "MIT",
-  "homepage": "https://github.com/jmanuelrosa/didomi#readme",
+  "homepage": "https://github.com/jmrosadev/didomi-challenge#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jmanuelrosa/didomi.git"
+    "url": "git+https://github.com/jmrosadev/didomi-challenge.git"
   },
   "bugs": {
-    "url": "https://github.com/jmanuelrosa/didomi/issues"
+    "url": "https://github.com/jmrosadev/didomi-challenge/issues"
   },
   "keywords": [
     "didomi"
