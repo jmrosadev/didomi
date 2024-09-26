@@ -15,28 +15,30 @@ declare module '@material-tailwind/react' {
     crossOrigin?: unknown
   }
   export interface ButtonProps extends EventCapture {
-    crossOrigin?: unknown
     placeholder?: string
-    children?: ReactNode
+  }
+  export interface IconButtonProps extends EventCapture {
+    placeholder?: string
   }
   export interface CardProps extends EventCapture {
-    crossOrigin?: unknown
+    placeholder?: string
+  }
+  export interface CardBodyProps extends EventCapture {
+    placeholder?: string
+  }
+  export interface CardFooterProps extends EventCapture {
     placeholder?: string
   }
   export interface TypographyProps extends EventCapture {
-    crossOrigin?: unknown
     placeholder?: string
   }
   export interface ListProps extends EventCapture {
-    crossOrigin?: unknown
     placeholder?: string
   }
   export interface ListItemProps extends EventCapture {
-    crossOrigin?: unknown
     placeholder?: string
   }
   export interface ListItemPrefixProps extends EventCapture {
-    crossOrigin?: unknown
     placeholder?: string
   }
 }
