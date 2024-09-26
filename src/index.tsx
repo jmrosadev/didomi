@@ -1,10 +1,11 @@
+import { ConsentsProvider } from '@/contexts/consents'
 import { ThemeProvider } from '@material-tailwind/react'
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import React from 'react'
 
 import ReactDOM from 'react-dom/client'
-
 import { Router } from './router'
 import './index.css'
 
@@ -17,7 +18,9 @@ ReactDOM
     <React.StrictMode>
       <ThemeProvider>
         <QueryClientProvider client={queryClient}>
-          <Router />
+          <ConsentsProvider>
+            <Router />
+          </ConsentsProvider>
         </QueryClientProvider>
       </ThemeProvider>
     </React.StrictMode>,
