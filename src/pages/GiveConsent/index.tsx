@@ -1,13 +1,16 @@
 import type { ConsentType } from '@/types'
 
+import { createConsent } from '@/api/consents'
+
 import { Form } from '@/components/Form'
 
 import lang from '@/locales/en-US.json'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Checkbox, Input } from '@material-tailwind/react'
-import { useForm } from 'react-hook-form'
 
+import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 import { consentSchema } from './schema'
 
 const DEFAULT_VALUES = {
@@ -23,7 +26,19 @@ export function GiveConsent() {
     resolver: zodResolver(consentSchema),
   })
 
-  const handleSubmit = async (consent: ConsentType) => consent
+  const navigate = useNavigate()
+  const queryClient = useQueryClient()
+
+  const create = useMutation({
+    mutationFn: (newConsent: ConsentType) => createConsent(newConsent),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['consents'] })
+
+      navigate('/consents')
+    },
+  })
+
+  const handleSubmit = async (consent: ConsentType) => create.mutate(consent)
 
   const agreements = methods.watch('agreements')
   const agreementsHasError = Boolean(methods.formState.errors.agreements)
