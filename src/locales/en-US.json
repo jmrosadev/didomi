@@ -1,0 +1,22 @@
+{
+  "agree": "I agree too",
+  "agreements": {
+    "label": "Consent given for",
+    "newsletter": "Receive newsletter",
+    "ads": "Be shown targeted ads",
+    "statistics": "Contribute to anonymous visit statistics"
+  },
+  "createConsent": "Give consent",
+  "email": {
+    "label": "Email",
+    "placeholder": "Enter your email",
+  },
+  "name": {
+    "label": "Name",
+    "placeholder": "Enter your name",
+  },
+  "notFound": {
+    "description": "This page could not be found.",
+    "buttonBack": "Go back home"
+  }
+}

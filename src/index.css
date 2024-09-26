@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply h-screen bg-gray-100
+    @apply h-screen bg-white
   }
 
   #root {
