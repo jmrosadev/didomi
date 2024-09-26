@@ -1,5 +1,4 @@
 import type { ConsentType } from '@/types'
-import { MOCK_DATA } from '@/mocks'
 import { createContext, type PropsWithChildren, useContext, useReducer } from 'react'
 
 export interface State {
@@ -19,7 +18,7 @@ export type ReducerConsentsActionType =
   Action<ConsentsActions.SAVE_CONSENT, ConsentType>
 
 export const initialState: State = {
-  consents: MOCK_DATA,
+  consents: [],
 }
 
 export function reducer(state: State, action: ReducerConsentsActionType): State {
@@ -37,13 +36,10 @@ export function reducer(state: State, action: ReducerConsentsActionType): State 
 export const ConsentsContext = createContext<{
   state: State
   dispatch: React.Dispatch<ReducerConsentsActionType>
-}>({
-  state: initialState,
-  dispatch: () => null,
-})
+} | undefined>(undefined)
 
-export function ConsentsProvider({ children }: PropsWithChildren) {
-  const [state, dispatch] = useReducer(reducer, initialState)
+export function ConsentsProvider({ children, consents }: PropsWithChildren<{ consents: ConsentType[] }>) {
+  const [state, dispatch] = useReducer(reducer, { consents })
 
   return (
     <ConsentsContext.Provider value={{ state, dispatch }}>
