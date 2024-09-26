@@ -1,10 +1,14 @@
 import { ThemeProvider } from '@material-tailwind/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
 import React from 'react'
+
 import ReactDOM from 'react-dom/client'
 
 import { Router } from './router'
-
 import './index.css'
+
+const queryClient = new QueryClient()
 
 const root = document.getElementById('root')
 ReactDOM
@@ -12,7 +16,9 @@ ReactDOM
   .render(
     <React.StrictMode>
       <ThemeProvider>
-        <Router />
+        <QueryClientProvider client={queryClient}>
+          <Router />
+        </QueryClientProvider>
       </ThemeProvider>
     </React.StrictMode>,
   )
