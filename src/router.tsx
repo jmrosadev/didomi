@@ -1,9 +1,10 @@
+import { useFetch } from '@/hooks/useFetch'
 import { HomeLayout } from '@/layouts/Home'
+
 import { Consents } from '@/pages/Consents'
-
 import { GiveConsent } from '@/pages/GiveConsent'
-import { NotFound } from '@/pages/NotFound'
 
+import { NotFound } from '@/pages/NotFound'
 import { createElement } from 'react'
 import { createBrowserRouter, Navigate, type RouteObject, RouterProvider } from 'react-router-dom'
 
@@ -33,6 +34,8 @@ export const routes: RouteObject[] = [
 const router = createBrowserRouter(routes)
 
 export function Router() {
+  useFetch()
+
   return createElement(
     RouterProvider,
     { router },
