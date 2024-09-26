@@ -95,7 +95,7 @@ export function useFetch() {
       }
 
       if (options?.method === 'POST') {
-        return resolve(createConsent({ body: options.body as unknown as ConsentType, dispatch }))
+        return resolve(createConsent({ body: JSON.parse(options.body as string), dispatch }))
       }
 
       const urlParsed = new URLSearchParams(url.toString().split('?')[1])
