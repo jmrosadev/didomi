@@ -4,16 +4,26 @@
     "label": "Consent given for",
     "newsletter": "Receive newsletter",
     "ads": "Be shown targeted ads",
-    "statistics": "Contribute to anonymous visit statistics"
+    "statistics": "Contribute to anonymous visit statistics",
+    "error": {
+      "required": "Please give consent for at least one of the options"
+    }
   },
   "createConsent": "Give consent",
   "email": {
     "label": "Email",
-    "placeholder": "Enter your email"
+    "placeholder": "Enter your email",
+    "error": {
+      "required": "Please enter your email",
+      "invalid": "Please enter a valid email: jhondoe@gmail.com"
+    }
   },
   "name": {
     "label": "Name",
-    "placeholder": "Enter your name"
+    "placeholder": "Enter your name",
+    "error": {
+      "required": "Please enter your name"
+    }
   },
   "notFound": {
     "description": "This page could not be found.",
