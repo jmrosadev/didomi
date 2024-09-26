@@ -31,7 +31,7 @@ export function Consents() {
 
   if (isLoading) {
     return (
-      <div className="space-y-4">
+      <div className="space-y-4 loading">
         <Card className="h-full w-full border border-blue-gray-100">
           <CardBody className="p-0">
             <Table>

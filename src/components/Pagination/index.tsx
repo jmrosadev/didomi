@@ -17,7 +17,7 @@ export function Pagination({ pages, total, currentPage, onClickPage }: Paginatio
   }
 
   return (
-    <div className="flex items-center gap-4">
+    <nav role="navigation" className="flex items-center gap-4">
       <Button
         variant="text"
         className="flex items-center gap-2"
@@ -29,7 +29,7 @@ export function Pagination({ pages, total, currentPage, onClickPage }: Paginatio
         {lang.pagination.previous}
       </Button>
 
-      <div className="grow flex items-center gap-2 justify-center">
+      <div className="grow flex items-center gap-2 justify-center pages">
         {Array.from({ length: pages }).map((_, index) => (
           <IconButton key={index} variant={isActive(index, currentPage) ? 'filled' : 'text'} onClick={() => onClickPage(index + 1)} color="gray">{index + 1}</IconButton>
         ))}
@@ -44,6 +44,6 @@ export function Pagination({ pages, total, currentPage, onClickPage }: Paginatio
         {lang.pagination.next}
         <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
       </Button>
-    </div>
+    </nav>
   )
 }
