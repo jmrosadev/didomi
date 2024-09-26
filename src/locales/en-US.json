@@ -9,14 +9,18 @@
   "createConsent": "Give consent",
   "email": {
     "label": "Email",
-    "placeholder": "Enter your email",
+    "placeholder": "Enter your email"
   },
   "name": {
     "label": "Name",
-    "placeholder": "Enter your name",
+    "placeholder": "Enter your name"
   },
   "notFound": {
     "description": "This page could not be found.",
     "buttonBack": "Go back home"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next"
   }
 }
