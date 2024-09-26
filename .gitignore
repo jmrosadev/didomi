@@ -1,6 +1,8 @@
 # Project Directories
 .husky/_
 build
+test-results
+playwright-report
 
 # env files
 .env
