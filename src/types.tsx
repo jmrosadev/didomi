@@ -10,3 +10,7 @@ export interface ConsentType {
   name: string
   agreements: ConsentAgreementType[]
 }
+
+export interface PaginationType {
+  page: number
+}
